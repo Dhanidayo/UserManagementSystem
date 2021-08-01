@@ -1,0 +1,12 @@
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\bin\Debug\net5.0\UMSClassLibrary.deps.json
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\bin\Debug\net5.0\UMSClassLibrary.dll
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\bin\Debug\net5.0\ref\UMSClassLibrary.dll
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\bin\Debug\net5.0\UMSClassLibrary.pdb
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.csproj.AssemblyReference.cache
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.AssemblyInfoInputs.cache
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.AssemblyInfo.cs
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.dll
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\ref\UMSClassLibrary.dll
+C:\Users\lenovo\Dropbox\My PC (DESKTOP-0CQ3F2P)\Documents\UserMgtSystem\UMSClassLibrary\obj\Debug\net5.0\UMSClassLibrary.pdb

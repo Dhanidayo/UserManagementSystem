@@ -10,7 +10,7 @@ namespace UMSConsole
         static void Main(string[] args)
         {   
             
-            FileSystem.ReadFile();
+            //FileSystem.ReadFile();
             
             bool runUMS = true;
 
@@ -99,7 +99,8 @@ namespace UMSConsole
 
                     case "2":
                     {
-                        Console.WriteLine("Editing user's information...");
+                        FileSystem.WriteFile();
+                        Console.WriteLine("User saved successfully.");
                         break;
                     }
 

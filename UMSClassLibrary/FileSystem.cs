@@ -16,8 +16,8 @@ namespace UMSClassLibrary
         public static async void WriteFile()
         {
             //create a file to write to
-            using StreamWriter writer = File.CreateText(filePath);
-            //writer.Dispose();
+            StreamWriter writer = File.CreateText(filePath);
+            writer.Dispose();
 
             using (StreamWriter streamWriter = File.AppendText(filePath))
             {

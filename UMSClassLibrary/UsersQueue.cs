@@ -20,7 +20,7 @@ namespace UMSClassLibrary
             if (this.Head == null)
             {
                 Head = Tail = node;
-                Count++;
+                this.Count++;
                 return node;
             }
             this.Tail.Next = node;

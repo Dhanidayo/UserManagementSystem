@@ -14,9 +14,6 @@ namespace UMSConsole
             
             bool runUMS = true;
 
-            //instantiating the queue class
-            UsersQueue<string> usersqueue = new UsersQueue<string>();
-
             Console.WriteLine("Welcome to UMSConsole App."); 
 
             while (runUMS)
@@ -56,7 +53,7 @@ namespace UMSConsole
 
                         Console.WriteLine("Email:");
                         string email = Console.ReadLine();
-                        Regex regex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                        Regex regex = new Regex(@"^[a-zA-Z0-9.!(@)#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
                         bool isValidEmail = regex.IsMatch(email);
                         while (!isValidEmail)
                         {
@@ -96,7 +93,7 @@ namespace UMSConsole
                         Console.WriteLine($"{firstName} {lastName} has been added successfully");
                         Console.WriteLine("\n");
 
-                        usersqueue.Enqueue(firstName, lastName, email, country, occupation, favFood);
+                        FileSystem.usersqueue.Enqueue(firstName, lastName, email, country, occupation, favFood);
                         break;
                     }
 
@@ -108,14 +105,14 @@ namespace UMSConsole
 
                     case "3":
                     {      
-                        Console.WriteLine(usersqueue.Dequeue() + " has been deleted successfully");
+                        Console.WriteLine(FileSystem.usersqueue.Dequeue() + " has been deleted successfully");
                         break;
                     }
 
                     case "4":
                     {
                         Console.WriteLine("-------------------------Users Information History-------------------------");
-                        usersqueue.Print();
+                        FileSystem.usersqueue.Print();
                         break;
                     }
 

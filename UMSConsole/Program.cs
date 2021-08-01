@@ -23,7 +23,6 @@ namespace UMSConsole
                 Console.WriteLine("2 to save changes");
                 Console.WriteLine("3 to Delete User");
                 Console.WriteLine("4 to display User Information History");
-                Console.WriteLine("5 to continue");
                 Console.WriteLine("0 to exit the program");
                 string UserOption = Console.ReadLine();
 
@@ -117,44 +116,22 @@ namespace UMSConsole
                         break;
                     }
 
-                    case "5":
-                    {
-                        runUMS = true;
-                        break;
-                    }
-
                     case "0":
                     {
                         //Console.Clear();
+                        Console.WriteLine("Thank you for choosing to connect with us. Bye!");
                         runUMS = false;
+                        FileSystem.WriteFile();
                         break;
                     }
 
                     default:
                     {
-                        Console.WriteLine("There is no option for this. Please select from options 0 - 5");
+                        Console.WriteLine("There is no option for this. Please select from options 0 - 4");
                         break;
                     }
                 }
             }
-            FileSystem.WriteFile();
         }
     }
 }
-
-
-
-
-// Console.WriteLine("Email:");
-//                         string email = Console.ReadLine();
-//                         Regex regex = new Regex(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$", RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.Singleline | RegexOptions.IgnoreCase);
-//                         bool isValidEmail = regex.IsMatch(email);
-//                         if (isValidEmail)
-//                         {
-//                             Console.WriteLine("Valid Email");
-//                         }
-//                         else
-//                         {
-//                             Console.WriteLine("Invalid Email, Please enter a valid email:");
-//                         }
-//                         string email = Console.ReadLine();

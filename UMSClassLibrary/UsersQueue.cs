@@ -10,16 +10,17 @@ namespace UMSClassLibrary
         public int Count { get; set; }
 
 
-        //public static UsersQueue<T> usersqueue = new UsersQueue<T>();
+        UsersQueueNode<T> node = null;
 
         //method to add users to the queue (add from the back)
         public UsersQueueNode<T> Enqueue(T userFirstName, T userLastName, T userEmail, T userCountry, T userOccupation, T userFavFood)
         {
-            UsersQueueNode<T> node = new UsersQueueNode<T>(userFirstName, userLastName, userEmail, userCountry, userOccupation, userFavFood);
+            node = new UsersQueueNode<T>(userFirstName, userLastName, userEmail, userCountry, userOccupation, userFavFood);
+
             if (this.Head == null)
             {
                 Head = Tail = node;
-                this.Count++;
+                Count++;
                 return node;
             }
             this.Tail.Next = node;
@@ -30,7 +31,7 @@ namespace UMSClassLibrary
 
         public T Dequeue()
         {
-            if (Head == null)
+            if (this.Head == null)
             {
                 Console.WriteLine("Users queue is empty");
                 throw new NullReferenceException("Queue is empty");
@@ -44,7 +45,7 @@ namespace UMSClassLibrary
 
         public void Print()
         {
-            var temp = Head;
+            var temp = this.Head;
             while (temp != null)
             {
                 Console.WriteLine($"Name: {temp.FirstName} {temp.LastName}");

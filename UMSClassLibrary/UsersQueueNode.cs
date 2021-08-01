@@ -1,6 +1,6 @@
 namespace UMSClassLibrary
 {
-    //creating generic node class contained in the queue
+    //creating generic node class contained in the queue - node value contains user model.
     public class UsersQueueNode<T>
     {
         //constructor to create a new node

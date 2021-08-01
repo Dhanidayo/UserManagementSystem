@@ -2,29 +2,31 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
-//using System.Threading.Tasks;
 
 namespace UMSClassLibrary
 {
     public class FileSystem
     {
+        //instantiating the queue class
+        public static UsersQueue<string> usersqueue = new UsersQueue<string>();
+        
         //declare the path to the file you want to create
-        string filePath = "../UMSClassLibraryUMS/Users.txt";
+        public static string filePath = "../UMSClassLibrary/Users.txt";
     
         public static async void WriteFile()
         {
             //create a file to write to
-            StreamWriter writer = File.CreateText(filePath);
-            writer.Dispose();
+            using StreamWriter writer = File.CreateText(filePath);
+            //writer.Dispose();
 
             using (StreamWriter streamWriter = File.AppendText(filePath))
             {
-                string userInfo = $"{UsersQueueNode.FirstName} {UsersQueueNode.LastName} {UsersQueueNode.Email} {UsersQueueNode.Country} {UsersQueueNode.Occupation} {UsersQueueNode.FavFood}";
-                var temp = Head;
+                string userInfo = usersqueue.Head.FirstName + "," + usersqueue.Head.LastName + "," + usersqueue.Head.Email + "," + usersqueue.Head.Country + ","  + usersqueue.Head.Occupation + "," + usersqueue.Head.FavFood;
+                var temp = usersqueue.Head;
                 while (temp != null)
                 {
-                    await writer.WriteLineAsync(userInfo);
-                    //streamWriteUsersFile.Dispose();
+                    await streamWriter.WriteLineAsync(userInfo);
+                    //streamWriter.Dispose();
                     temp = temp.Next;
                 }
             }
@@ -34,7 +36,7 @@ namespace UMSClassLibrary
         {
             //open the file to read from
             //using (StreamReader reader = new StreamReader(filePath));
-            using (StreamReader reader = File.OpenText(filePath));
+            using (StreamReader reader = File.OpenText(filePath))
             {
                 var read = await reader.ReadToEndAsync();
                 read = read.TrimEnd(); //trim the end to avoid trailing spaces.
